@@ -1,0 +1,22 @@
+[
+  {
+    "group": "Frontend",
+    "icon": "🖥️",
+    "items": ["HTML & CSS", "JavaScript", "React", "Next.js", "Tailwind CSS", "Figma"]
+  },
+  {
+    "group": "Backend & Database",
+    "icon": "⚙️",
+    "items": ["PHP", "Supabase", "SQL", "MongoDB", "n8n"]
+  },
+  {
+    "group": "AI & Data Science",
+    "icon": "🤖",
+    "items": ["Python", "Feature Engineering", "Web Scraping", "Data Preprocessing", "Model Training", "Jupyter"]
+  },
+  {
+    "group": "Android",
+    "icon": "📱",
+    "items": ["Kotlin", "XML", "Android Studio"]
+  }
+]
