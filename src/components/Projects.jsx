@@ -8,7 +8,7 @@ const TABS = [
 ];
 
 const CATEGORY_COLOR = {
-  'AI/ML':           { bg: 'rgba(139,92,246,0.12)', border: 'rgba(139,92,246,0.35)', text: '#c084fc' },
+  'AI / ML':         { bg: 'rgba(139,92,246,0.12)', border: 'rgba(139,92,246,0.35)', text: '#c084fc' },
   'AI & Automation': { bg: 'rgba(139,92,246,0.12)', border: 'rgba(139,92,246,0.35)', text: '#c084fc' },
   'Frontend':        { bg: 'rgba(255,20,147,0.10)', border: 'rgba(255,156,220,0.35)', text: 'var(--pink-hot)' },
   'Full Stack':      { bg: 'rgba(20,200,147,0.10)', border: 'rgba(20,200,147,0.35)',  text: '#34d399' },
@@ -240,7 +240,6 @@ export default function Projects() {
         setLoading(true);
         setError(null);
 
-        // ✅ import.meta.env.BASE_URL — works on localhost AND GitHub Pages
         const url = `${import.meta.env.BASE_URL}data/projects.json`;
         const res = await fetch(url, { signal: controller.signal });
         if (!res.ok) throw new Error(`Failed to fetch projects (${res.status})`);
@@ -267,16 +266,15 @@ export default function Projects() {
     return () => observer.disconnect();
   }, []);
 
-  // ✅ Filter — matches exact category strings from projects.json
   const filtered =
-    active === 'all'
-      ? projects
-      : projects.filter(p => {
-          if (active === 'AI')       return p.category === 'AI/ML' || p.category === 'AI & Automation';
-          if (active === 'Web Dev')  return p.category === 'Full Stack';
-          if (active === 'frontend') return p.category === 'Frontend';
-          return false;
-        });
+  active === 'all'
+    ? projects
+    : projects.filter(p => {
+        if (active === 'AI')       return p.category === 'AI / ML' || p.category === 'AI & Automation';
+        if (active === 'Web Dev')  return p.category === 'Full Stack';
+        if (active === 'frontend') return p.category === 'Frontend';
+        return false;
+      });
 
   return (
     <section id="projects" className="relative z-10 py-24 px-4">
