@@ -1,0 +1,120 @@
+import { useEffect, useRef } from 'react';
+
+const LINKS = [
+  {
+    label: 'GitHub',
+    href: 'https://github.com/laibaaslam713',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Email',
+    href: 'mailto:laibaaslam713@gmail.com',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://linkedin.com/in/laibaaslam713',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
+        <circle cx="4" cy="4" r="2"/>
+      </svg>
+    ),
+  },
+];
+
+export default function Contact() {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) ref.current?.classList.add('animate-fade-up'); },
+      { threshold: 0.15 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section id="contact" className="relative z-10 py-24 px-4">
+      <div className="max-w-2xl mx-auto text-center" ref={ref} style={{ opacity: 0 }}>
+        <h2 className="section-title mb-10">Get In Touch</h2>
+
+        <div className="glass p-10 flex flex-col items-center gap-8">
+          
+          <div>
+            <p
+              className="font-cinzel mb-3"
+              style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)', color: 'var(--pink-soft)' }}
+            >
+              Let's build something together
+            </p>
+            <p style={{ color: 'var(--text-dim)', lineHeight: 1.85, fontSize: '0.95rem' }}>
+              I'm currently open to new opportunities. Whether you have a question, a project idea,
+              or just want to say hi — feel free to reach out. I'll get back to you as soon as possible!
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-4 justify-center">
+            {LINKS.map(link => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.href.startsWith('mailto') ? '_self' : '_blank'}
+                rel="noreferrer"
+                className="flex items-center gap-2 font-raleway transition-all duration-300"
+                style={{
+                  padding: '0.7rem 1.6rem',
+                  borderRadius: 30,
+                  fontSize: '0.83rem',
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  border: '1.5px solid var(--white-border)',
+                  color: 'var(--text)',
+                  textDecoration: 'none',
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.borderColor = 'var(--pink)';
+                  e.currentTarget.style.color = 'var(--pink)';
+                  e.currentTarget.style.boxShadow = '0 0 15px rgba(255,156,220,0.25)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.borderColor = 'var(--white-border)';
+                  e.currentTarget.style.color = 'var(--text)';
+                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.transform = 'none';
+                }}
+              >
+                {link.icon}
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          <div
+            className="flex items-center gap-2 px-4 py-2 rounded-full"
+            style={{ background: 'rgba(255,20,147,0.1)', border: '1px solid rgba(255,20,147,0.25)' }}
+          >
+            <span
+              className="inline-block rounded-full"
+              style={{ width: 8, height: 8, background: '#22c55e', boxShadow: '0 0 8px #22c55e', animation: 'blink 2s ease-in-out infinite' }}
+            />
+            <span style={{ fontSize: '0.78rem', color: 'var(--pink-soft)', letterSpacing: '0.08em' }}>
+              Available for freelance & full-time opportunities
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,110 @@
+[
+    {
+      "id": "biasness-detection-system",
+      "title": "Biasness Detection System",
+      "description": "A Final Year Project that detects and classifies biased and unbiased e-commerce reviews using Machine Learning and Natural Language Processing (NLP). The system includes data preprocessing, feature engineering, sentiment analysis, and review classification.",
+      "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+      "live_demo_link": null,
+      "github_link": "https://github.com/laibaaslam713/FYP_Biasness_Detection",
+      "category": "AI / ML",
+      "technologies": [
+        "Python",
+        "Machine Learning",
+        "NLP",
+        "Feature Engineering",
+        "Data Preprocessing",
+        "Jupyter Notebook"
+      ]
+    },
+    {
+      "id": "ai-recipe-generator",
+      "title": "AI Recipe Generator",
+      "description": "An AI-powered recipe generation platform built during the Nexium internship using Next.js, Supabase, and n8n workflows. Users can generate recipes dynamically through AI-based automation.",
+      "image_url": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80",
+      "live_demo_link": "https://nexium-laiba-aslam-internship-zj2e.vercel.app/",
+      "github_link": "https://github.com/laibaaslam713/Nexium_LaibaAslam_Internship/tree/main/grand-project",
+      "category": "AI & Automation",
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "n8n",
+        "AI Integration",
+        "Vercel"
+      ]
+    },
+    {
+      "id": "quote-generator-app",
+      "title": "Quote Generator App",
+      "description": "A responsive web application that generates motivational quotes based on user-entered topics with a clean and modern user interface.",
+      "image_url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80",
+      "live_demo_link": "https://nexium-laiba-aslam-assign1.vercel.app/",
+      "github_link": "https://github.com/laibaaslam713/Nexium_LaibaAslam_Internship/tree/main/assignment-1",
+      "category": "Web Dev",
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "Responsive Design",
+        "Vercel"
+      ]
+    },
+    {
+      "id": "food-express-platform",
+      "title": "Food Express",
+      "description": "A food ordering platform where users can instantly place orders through WhatsApp integration with a single click.",
+      "image_url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80",
+      "live_demo_link": "https://foodexpress-um4q.vercel.app/",
+      "github_link": "https://github.com/laibaaslam713/foodexpress",
+      "category": "Frontend",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "WhatsApp API"
+      ]
+    },
+    {
+      "id": "todo-list-app",
+      "title": "To-Do List App",
+      "description": "A task management application with features like task creation, deletion, completion tracking, and responsive user experience.",
+      "image_url": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&q=80",
+      "live_demo_link": null,
+      "github_link": "https://github.com/laibaaslam713/To-Do-List",
+      "category": "Frontend",
+      "technologies": [
+        "React.js",
+        "JavaScript",
+        "CSS"
+      ]
+    },
+    {
+      "id": "notes-app",
+      "title": "Notes App",
+      "description": "A minimalist and responsive note-taking application built using React.js and Tailwind CSS with a clean user interface.",
+      "image_url": "https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=600&q=80",
+      "live_demo_link": "https://note-app-omega-swart.vercel.app/",
+      "github_link": "https://github.com/laibaaslam713/Note-App",
+      "category": "Frontend",
+      "technologies": [
+        "React.js",
+        "Tailwind CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": "mern-admin-dashboard",
+      "title": "Admin Panel",
+      "description": "A full-stack CRUD admin dashboard for managing services with complete Create, Read, Update, and Delete functionality using the MERN stack.",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80",
+      "live_demo_link": null,
+      "github_link": "https://github.com/laibaaslam713/Admin-Panel",
+      "category": "Web Dev",
+      "technologies": [
+        "MongoDB",
+        "Express.js",
+        "React.js",
+        "Node.js",
+        "REST API"
+      ]
+    }
+  ]
