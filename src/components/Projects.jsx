@@ -11,7 +11,7 @@ const CATEGORY_COLOR = {
   'AI / ML':         { bg: 'rgba(139,92,246,0.12)', border: 'rgba(139,92,246,0.35)', text: '#c084fc' },
   'AI & Automation': { bg: 'rgba(139,92,246,0.12)', border: 'rgba(139,92,246,0.35)', text: '#c084fc' },
   'Frontend':        { bg: 'rgba(255,20,147,0.10)', border: 'rgba(255,156,220,0.35)', text: 'var(--pink-hot)' },
-  'Full Stack':      { bg: 'rgba(20,200,147,0.10)', border: 'rgba(20,200,147,0.35)',  text: '#34d399' },
+  'Web Dev':      { bg: 'rgba(20,200,147,0.10)', border: 'rgba(20,200,147,0.35)',  text: '#34d399' },
 };
 
 function ProjectCard({ project }) {
@@ -191,7 +191,6 @@ function removeHover(e, borderColor, bg) {
   e.currentTarget.style.boxShadow = 'none';
 }
 
-// ── Skeleton card shown while loading ────────────────────────────────────────
 function SkeletonCard() {
   return (
     <div
@@ -224,7 +223,6 @@ function SkeletonCard() {
   );
 }
 
-// ── Main section ──────────────────────────────────────────────────────────────
 export default function Projects() {
   const [projects, setProjects] = useState([]);
   const [loading,  setLoading]  = useState(true);
@@ -256,7 +254,6 @@ export default function Projects() {
     return () => controller.abort();
   }, []);
 
-  // Scroll-in animation
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) ref.current?.classList.add('animate-fade-up'); },
@@ -270,8 +267,8 @@ export default function Projects() {
   active === 'all'
     ? projects
     : projects.filter(p => {
-        if (active === 'AI')       return p.category === 'AI / ML' || p.category === 'AI & Automation';
-        if (active === 'Web Dev')  return p.category === 'Full Stack';
+        if (active === 'AI')       return p.category === 'AI / ML' && p.category === 'AI & Automation';
+        if (active === 'Web Dev')  return p.category === 'Web Dev';
         if (active === 'frontend') return p.category === 'Frontend';
         return false;
       });
