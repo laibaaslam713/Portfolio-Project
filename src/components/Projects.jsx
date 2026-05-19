@@ -236,7 +236,7 @@
           setLoading(true);
           setError(null);
 
-          const res = await fetch('/Portfolio-Project/data/projects.json', { signal: controller.signal });
+          const res = await fetch('/data/projects.json', { signal: controller.signal });
           if (!res.ok) throw new Error(`Failed to fetch projects (${res.status})`);
           const data = await res.json();
           setProjects(data);
