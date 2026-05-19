@@ -264,14 +264,14 @@ export default function Projects() {
   }, []);
 
   const filtered =
-  active === 'all'
-    ? projects
-    : projects.filter(p => {
-        if (active === 'AI')       return p.category === 'AI / ML' && p.category === 'AI & Automation';
-        if (active === 'Web Dev')  return p.category === 'Web Dev';
-        if (active === 'frontend') return p.category === 'Frontend';
-        return false;
-      });
+      active === 'all'
+        ? projects
+        : projects.filter(p => {
+          if (active === 'AI')       return p.category === 'AI / ML' || p.category === 'AI & Automation';
+          if (active === 'Web Dev')      return p.category === 'Web Dev';
+          if (active === 'frontend') return p.category === 'Frontend';
+          return false;
+        });
 
   return (
     <section id="projects" className="relative z-10 py-24 px-4">
