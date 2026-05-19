@@ -267,7 +267,7 @@ export default function Projects() {
       active === 'all'
         ? projects
         : projects.filter(p => {
-          if (active === 'AI')       return p.category === 'AI / ML' && p.category === 'AI & Automation';
+          if (active === 'AI')       return p.category === 'AI / ML' || p.category === 'AI & Automation';
           if (active === 'Web Dev')      return p.category === 'Web Dev';
           if (active === 'frontend') return p.category === 'Frontend';
           return false;
